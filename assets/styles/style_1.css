@@ -68,3 +68,15 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* Styles for links */
+a {
+    color: #4CAF50; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Styles for links on hover */
+a:hover {
+    color: #FF5722; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}

@@ -1,9 +1,11 @@
-<link href="../assets/style_1.css" rel="stylesheet"/>
-<link href="../assets/code.css" rel="stylesheet"/>
+<link href="../assets/styles/style_1.css" rel="stylesheet"/>
 <img src="../assets/lessons/lesson-2/dices_1.png" width=200px>
 
 # Tartalomjegyzék
-1. [Alapértelmezett paraméterek](#alapertelmezett-parameterek)
+1. [Alapértelmezett paraméterek](#id-1)
+2. [isdigit() metódus](#id-2)
+3. [Listák generálása](#id-3)
+4. [index() metódus](#id-4)
 
 # A játékról:
 - A játékot 2 vagy 4 játékos játszhatja.
@@ -13,7 +15,7 @@
 - Ha a játékos úgy dönt, hogy megáll, akkor a pontjai hozzáadódnak a játékos összpontszámához és a következő játékos következik.
 
 # Új dolgok:
-- ## A `random` modul segítségével tudunk véletlenszámokat generálni.
+- ## A `random` modul segítségével tudunk véletlen számokat generálni.
     ```python
     import random
 
@@ -22,7 +24,7 @@
     - `random.randint(a, b)` -> Visszaad egy véletlenszerű egész számot az `a` és `b` között. 
     - `random.choice(lista)` -> Visszaad egy véletlenszerű elemet a listából.
 
-- ## A függvényeknek lehetnek alapértelmezett paraméterei.()
+- ## <div id="id-1"/>A függvényeknek lehetnek alapértelmezett paraméterei 
     ```python
     import random
 
@@ -36,7 +38,7 @@
     - Ha nem adunk meg értéket a `dob` függvénynek, akkor az `oldalSzam` értéke 6 lesz.
     - Ha megadunk értéket a `dob` függvénynek, akkor az `oldalSzam` értéke az általunk megadott érték lesz. 
 
-- ## Az `isdigit()` metódus segítségével ellenőrizhetjük, hogy egy string csak számokat tartalmaz-e. 
+- ## <div id="id-2"/> Az `isdigit()` metódus segítségével ellenőrizhetjük, hogy egy string csak számokat tartalmaz-e. 
     ```python
     players = input("Enter the number of players (2 - 4): ")
     if players.isdigit():
@@ -46,7 +48,7 @@
     - Példa: `szam = "123a"`  `szam.isdigit()`  -> False 
     - Így többet nem kell listát használnunk ehhez az ellenőrzéshez.
 
-- ## Tudunk listákat generálni
+- ## <div id="id-3"/>Tudunk listákat generálni
     ```python
     jatekos_pontok = [0 for _ in range(jatekosSzam)]
     ```
@@ -57,7 +59,7 @@
         - Példa: `szamok = [i if i % 2 == 0 else 0 for i in range(1, 11)]`  -> [0, 2, 0, 4, 0, 6, 0, 8, 0, 10]
             - Ha az `i` értéke páros, akkor az `i` értékét adja a listához, ha nem, akkor 0-t ad a listához.
     - > Érdekesség: A generált listák elemei csak akkor dolgozódnak fel, amikor hozzáférünk az adott elemhez. Ez azt jelenti, hogy a generált listák nem foglalnak sok memóriát, mivel csak a szabályt tárolják, amely alapján a lista elemei generálódnak.
-- ## `index()` metódus
+- ## <div id="id-4"> `index()` metódus
     - A `list.index(elem)` metódus visszaadja az `elem` indexét a listában.
     - Példa: `szamok = [1, 2, 3, 4, 5]`  `index = szamok.index(3)`  -> 2
     - Ha az `elem` nem szerepel a listában, akkor hibát fog dobni.
