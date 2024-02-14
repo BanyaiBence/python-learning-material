@@ -1,0 +1,48 @@
+/* Custom styles for Jupyter Notebook */
+
+/* Change background color of code cells */
+div.input_area {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+/* Style text cells */
+div.text_cell_render {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Style headers */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Change background color of output areas */
+div.output_area {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Style output text */
+div.output_area pre {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 12px;
+    color: #333;
+}
+
+/* Style output prompts */
+div.output_prompt {
+    color: #777;
+}
+
+/* Style output results */
+div.output_result {
+    color: #333;
+}
+
+/* Style output traceback */
+div.output_traceback {
+    color: #c00;
+}
