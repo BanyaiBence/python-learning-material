@@ -1,7 +1,5 @@
 <link href="../assets/style_1.css" rel="stylesheet"/>
 <link href="../assets/code.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
 <img src="../assets/lessons/lesson-2/dices_1.png" width=200px>
 
 # Tartalomjegyzék
