@@ -10,10 +10,6 @@ h1, h2, h3 {
     color: #ff9f43;
 }
 
-a {
-    color: #f368e0;
-}
-
 p {
     color: #ffffff;
 }
@@ -23,8 +19,7 @@ ul, ol {
 }
 
 code {
-    background-color: #404040;
-    color: #b5b5b5;
+    background-color: #404040 !important;
     padding: 2px 4px;
     border-radius: 4px;
 }

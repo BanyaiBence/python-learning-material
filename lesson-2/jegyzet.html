@@ -1,0 +1,98 @@
+<p><link href="../assets/styles/style_1.css" rel="stylesheet"/>
+<img src="../assets/lessons/lesson-2/dices_1.png" width=200px></p>
+<h1>Tartalomjegyzék</h1>
+<ol>
+<li><a href="#id-1">Alapértelmezett paraméterek</a></li>
+<li><a href="#id-2">isdigit() metódus</a></li>
+<li><a href="#id-3">Listák generálása</a></li>
+<li><a href="#id-4">index() metódus</a></li>
+</ol>
+<h1>A játékról:</h1>
+<ul>
+<li>A játékot 2 vagy 4 játékos játszhatja.</li>
+<li>A játék folyamán a játékosok körönként dobhatnak egy kockával.</li>
+<li>A dobás eredménye hozzáadódik a játékos pontjaihoz.</li>
+<li>Ha a játékos 1-et dob, akkor az összes eddigi pontja elveszik és a következő játékos következik.</li>
+<li>Ha a játékos úgy dönt, hogy megáll, akkor a pontjai hozzáadódnak a játékos összpontszámához és a következő játékos következik.</li>
+</ul>
+<h1>Új dolgok:</h1>
+<ul>
+<li>
+<h2>A <code>random</code> modul segítségével tudunk véletlen számokat generálni.</h2>
+<p>```python
+import random</p>
+<p>roll = random.randint(1, 6)
+<code>``
+-</code>random.randint(a, b)<code>-&gt; Visszaad egy véletlenszerű egész számot az</code>a<code>és</code>b<code>között. 
+-</code>random.choice(lista)` -&gt; Visszaad egy véletlenszerű elemet a listából.</p>
+</li>
+<li>
+<h2><div id="id-1"/>A függvényeknek lehetnek alapértelmezett paraméterei</h2>
+<pre><code>```python
+import random
+</code></pre>
+<p>def dob(oldal_szam=6):
+    roll = random.randint(1, oldal_szam)</p>
+<pre><code>return roll
+</code></pre>
+<p><code>``
+- A függvényeknek lehetnek olyan paraméterei, amelyeknek alapértelmezett értéket adunk. Ha a függvényt meghívjuk és nem adunk meg új értéket az alapértelmezett paraméternek, akkor az alapértelmezett értékkel fogja végrehajtani a függvényt. 
+- Példa:</code>def dob(oldalSzam=6):<code>- Ha nem adunk meg értéket a</code>dob<code>függvénynek, akkor az</code>oldalSzam<code>értéke 6 lesz.
+- Ha megadunk értéket a</code>dob<code>függvénynek, akkor az</code>oldalSzam` értéke az általunk megadott érték lesz. </p>
+</li>
+<li>
+<h2><div id="id-2"/> Az <code>isdigit()</code> metódus segítségével ellenőrizhetjük, hogy egy string csak számokat tartalmaz-e.</h2>
+<pre><code>```python
+players = input("Enter the number of players (2 - 4): ")
+if players.isdigit():
+    players = int(players)
+```
+</code></pre>
+<ul>
+<li>Példa: <code>szam = "123"</code>  <code>szam.isdigit()</code>  -&gt; True </li>
+<li>Példa: <code>szam = "123a"</code>  <code>szam.isdigit()</code>  -&gt; False </li>
+<li>Így többet nem kell listát használnunk ehhez az ellenőrzéshez.</li>
+</ul>
+</li>
+<li>
+<h2><div id="id-3"/>Tudunk listákat generálni</h2>
+<pre><code>```python
+jatekos_pontok = [0 for _ in range(jatekosSzam)]
+```
+</code></pre>
+<ul>
+<li>Példa: <code>szamok = [i for i in range(1, 11)]</code>  -&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  </li>
+<li>
+<h4>Egy listában tudunk feltételes kifejezéseket is használni.</h4>
+<ul>
+<li>Példa: <code>szamok = [i for i in range(1, 11) if i % 2 == 0]</code>  -&gt; [2, 4, 6, 8, 10]<ul>
+<li>A feltétel csak akkor teljesül, ha az <code>i</code> értéke páros.</li>
+</ul>
+</li>
+<li>Példa: <code>szamok = [i if i % 2 == 0 else 0 for i in range(1, 11)]</code>  -&gt; [0, 2, 0, 4, 0, 6, 0, 8, 0, 10]<ul>
+<li>Ha az <code>i</code> értéke páros, akkor az <code>i</code> értékét adja a listához, ha nem, akkor 0-t ad a listához.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<blockquote>
+<p>Érdekesség: A generált listák elemei csak akkor dolgozódnak fel, amikor hozzáférünk az adott elemhez. Ez azt jelenti, hogy a generált listák nem foglalnak sok memóriát, mivel csak a szabályt tárolják, amely alapján a lista elemei generálódnak.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<h2><div id="id-4"> <code>index()</code> metódus</h2>
+<ul>
+<li>A <code>list.index(elem)</code> metódus visszaadja az <code>elem</code> indexét a listában.</li>
+<li>Példa: <code>szamok = [1, 2, 3, 4, 5]</code>  <code>index = szamok.index(3)</code>  -&gt; 2</li>
+<li>Ha az <code>elem</code> nem szerepel a listában, akkor hibát fog dobni.</li>
+<li>
+<blockquote>
+<p>Emlékeztető: A listák indexelése 0-tól kezdődik.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
