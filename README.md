@@ -3,4 +3,4 @@
 
 ## Tartalomjegyzék
 - <a href="#">1.óra: TBD</a> 
-- <a href="lesson-2/jegyzet">2. óra</a>
+- <a href="lesson-2/jegyzet.md">2. óra</a>
