@@ -1,6 +1,8 @@
 <link href="../assets/styles/style_1.css" rel="stylesheet"/>
 <img src="../assets/lessons/lesson-2/dices_1.png" width=200px>
 
+# A mai fő témánk, gyakorlás és a listák
+
 # Tartalomjegyzék
 1. [Alapértelmezett paraméterek](#id-1)
 2. [isdigit() metódus](#id-2)
@@ -28,6 +30,10 @@
 24. [Tupple](#id-24)
 25. [Set](#id-25)
 26. [Dictionary](#id-26)
+27. [Lista indexelős trükkök](#id-27)
+28. [Feladatok](#id-28)
+29. [Megoldások](#id-29)
+30. [Összefoglaló](#id-31)
 
 # A játékról:
 - A játékot 2 vagy 4 játékos játszhatja.
@@ -183,6 +189,59 @@
     - A dictionary kulcsai nem lehetnek azonosak.
     -> Megjegyzés: A dictionary-ról később fogunk még részletesebben beszélni.
 
-        
+- ## <div id="id-27"/>Lista indexelős trükkök
+    - A lista elemeit lehet indexelni, tehát hozzáférni az elemekhez.
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `elsoElem = szamok[0]`  -> 1
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `utolsoElem = szamok[-1]`  -> 5
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `masodikElem = szamok[1]`  -> 2
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `masodiktolNegyedikElem = szamok[1:4]`  -> [2, 3, 4]
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `elsoNegyElem = szamok[:4]`  -> [1, 2, 3, 4]
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `masodiktolUtolsoElem = szamok[1:]`  -> [2, 3, 4, 5]
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `masodiktolUtolsoElottiElem = szamok[1:-1]`  -> [2, 3, 4]
+    - Példa: `szamok = [1, 2, 3, 4, 5]`  `masodiktolUtolsoElemKettesevel = szamok[1:-1:2]`  -> [2, 4]
+    - A [::-1] kifejezés megfordítja a listát. Mert ez a lista végétől kezdi indexelni és -1-esével lépked.
+    - > Megjegyzés: A lista indexelése 0-tól kezdődik és a negatív indexekkel a lista végétől tudunk indexelni. A `:` jel után megadhatjuk, hogy meddig szeretnénk indexelni és hogy hányasával szeretnénk lépkedni.
 
-    
+# <div id="id-28"/> Feladatok
+1. Készíts egy függvényt, amely visszaad egy véletlenszerű számot 1 és 6 között.
+2. Készíts egy függvényt, amely visszaad egy véletlenszerű számot 1 és 6 között, de a függvénynek legyen egy alapértelmezett paramétere, amely megadja, hogy hány oldalú kockával dobunk.
+3. Kérj be a felhasználótól egy számot és ellenőrizd le, hogy csak számokat adott-e meg.
+4. Kérj be a felhasználótól egy számot és ellenőrizd le, hogy csak számokat adott-e meg. Ha igen, akkor add vissza a számot, ha nem, akkor kérj be újra egy számot.
+5. Készíts egy függvényt, amely visszaad egy listát 1-től 10-ig.
+6. Készíts egy függvényt, amely visszaad egy listát 1-től 10-ig, de csak a páros számokat.
+7. Készíts egy függvényt, amely visszaad egy listát 1-től 10-ig, de ha a szám osztható 3-mal, akkor a szám helyett adjon vissza egy 0-t.
+8. Készíts egy olyan függvényt, amely kiszámolja egy lista legnagyobb és legkisebb elemének a különbségét.
+9. Készíts egy olyan függvényt, amely kiszámolja egy lista elemeinkek az átlagát.
+10. Készíts egy függvényt ami beszúr egy element pont a lista közepére.
+11. Készíts egy függvényt ami a lista minden elemét megszorozza 2-vel.
+12. Készíts egy függvényt ami visszaadja a listát fordított sorrendben. (Ne a `reverse()` metódust használd. Írd meg a saját megoldásodat.)
+
+# <div id="id-29"/> Megoldások
+1. [Megoldás](solutions/1.py)
+2. [Megoldás](solutions/2.py)
+3. [Megoldás](solutions/3-4.py)
+4. [Megoldás](solutions/3-4.py)
+5. [Megoldás](solutions/5.py)
+6. [Megoldás](solutions/6.py)
+7. [Megoldás](solutions/7.py)
+8. [Megoldás](solutions/8.py)
+9. [Megoldás](solutions/9.py)
+10. [Megoldás](solutions/10.py)
+11. [Megoldás](solutions/11.py)
+12. [Megoldás](solutions/12.py)
+
+# <div id="id-30"/>Összefoglaló
+- A listák olyan adatszerkezetek, amelyekben több elemet tudunk tárolni.
+- A listák indexelhetőek, tehát hozzáférhetünk az elemekhez.
+- A listák elemeit tudjuk módosítani.
+- A listák elemeit tudjuk rendezni, megfordítani, eltávolítani, hozzáadni, beszúrni, másolni.
+- A listák elemeit tudjuk összegezni, megszorozni, átlagát kiszámolni.
+- A listák elemeit tudjuk ellenőrizni, hogy szerepelnek-e a listában és hogy hányszor szerepelnek.
+- A listák elemeit tudjuk generálni és feltételes kifejezéseket használni.
+- A listák elemeit tudjuk indexelni és szeletelni.
+- A listák elemeit tudjuk más adatszerkezetekké alakítani.
+- A listák elemeit tudjuk iterálni.
+- A listák elemeit tudjuk másolni.
+- A listák elemeit tudjuk összehasonlítani más listákkal.
+- A listák elemeit tudjuk összehasonlítani más adatszerkezetekkel.
+- A listák elemeit tudjuk ellenőrizni, hogy iterálhatóak-e.
